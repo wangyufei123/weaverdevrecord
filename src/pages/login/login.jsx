@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import { Form, Input, Button, Checkbox,message } from 'antd';
+import { Form, Input, Button,message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import './login.css'
 import {reqLogin} from "../../apis";
@@ -32,9 +32,13 @@ export default class Login extends Component {
     };
     render() {
         const user = memoryUtils.user;
-        if(user){
+        console.log("user",user);
+        //if(user && user.id){
+        //此项目作为前后端分离的项目，后端没有进行开发，此时先这么写着。待后端项目的登录功能开发完成后
+        //此处在进行修改
+        /*if(user){
             return <Redirect to='/'/>
-        }
+        }*/
         return (
             <div className='login'>
                 <header className='login-header'>

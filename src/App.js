@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter,HashRouter,Route,Switch,Redirect} from "react-router-dom";
+import {BrowserRouter,Route,Switch,Redirect} from "react-router-dom";
 /*import DevTools from "mobx-react-devtools";*/
 
 import './App.css';
@@ -20,9 +20,7 @@ import Admin from "./pages/admin/admin";
 *       开启也需要将状态的改变写在@action的修饰器中
 * */
 export default class App extends React.Component{
-    constructor(props){
-        super(props);
-    }
+
     render() {
         return(
                 <BrowserRouter>
@@ -30,7 +28,6 @@ export default class App extends React.Component{
                         <Route path='/login' component={Login}/>
                         <Route path='/' component={Admin}/>
                     </Switch>
-                    <Redirect to='/login' />
                 </BrowserRouter>
         )
     }
