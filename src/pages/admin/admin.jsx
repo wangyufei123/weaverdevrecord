@@ -6,6 +6,7 @@ import Header from "../../components/header/header";
 import LeftNav from "../../components/left-nav/left_nav";
 import Home from "../home/home";
 import Role from "../role/role";
+import User from "../user/user";
 const {  Footer, Sider, Content } = Layout;
 
 export default class Admin extends Component {
@@ -28,6 +29,7 @@ export default class Admin extends Component {
                         <Switch>
                             <Route path='/home' component={Home}/>
                             <Route path='/role' component={Role}/>
+                            <Route path='/user' component={User}/>
                             <Redirect from='/' exact to='/home'/>
                         </Switch>
 
